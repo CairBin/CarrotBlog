@@ -1,5 +1,16 @@
 <script setup>
 import banner from './components/banner.vue'
+import articleCard from './components/articleCard.vue'
+
+const articleTest = {
+    id: 1,
+    title: 'HelloWorld',
+    created: '2023/2/16 19:00:00',
+    slug: 'HelloWorld',
+    authorName: 'CairBin',
+    browseCount: 1,
+    typeName:'default'
+}
 
 </script>
 
@@ -16,6 +27,9 @@ import banner from './components/banner.vue'
                     </el-col>
                     <el-col :span="16">
                         <banner></banner>
+                        <div class="content-container">
+                            <articleCard :obj="articleTest"></articleCard>
+                        </div>
                     </el-col>
                     <el-col :span="4">
 
@@ -30,5 +44,7 @@ import banner from './components/banner.vue'
 </template>
 
 <style scoped>
-
+.content-container{
+    margin-top:25px;
+}
 </style>
